@@ -112,10 +112,34 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            {/* Desktop - Theme toggle before Get in Touch */}
+            {/* Desktop/Tablet - Social icons alongside theme toggle */}
+            <a
+              href="https://linkedin.com/in/shreyanshjain"
+              className="hidden md:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+              title="LinkedIn"
+            >
+              💼
+            </a>
+            <a
+              href="mailto:shreyansh@example.com"
+              className="hidden md:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+              title="Email"
+            >
+              📧
+            </a>
+            <a
+              href="/resume.pdf"
+              className="hidden md:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+              title="Download Resume"
+            >
+              📄
+            </a>
+            
+            {/* Desktop - Theme toggle */}
             <button
               onClick={toggleTheme}
               className="hidden md:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+              title="Toggle Theme"
             >
               {isDark ? (
                 <span className="text-yellow-500">☀️</span>
