@@ -70,8 +70,8 @@ const Navigation = () => {
 // Hero Section
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen bg-white flex items-center py-12 md:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="home" className="min-h-screen bg-white flex items-center py-16 md:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 mt-12"> {/* Added top margin */}
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
           {/* Left side - Text content */}
           <div className="space-y-6"> {/* Reduced from space-y-8 to space-y-6 */}
