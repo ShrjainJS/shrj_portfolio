@@ -94,9 +94,12 @@ const HeroSection = () => {
                 View My Work →
               </button>
             </div>
+          </div>
 
-            {/* Social icons */}
-            <div className="flex items-center space-x-4 pt-4">
+          {/* Right side - Photo with badge and logos */}
+          <div className="flex flex-col items-center lg:items-end">
+            {/* Social CTAs above photo */}
+            <div className="flex items-center space-x-4 mb-6">
               <a
                 href="https://linkedin.com/in/shreyanshjain"
                 className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
@@ -116,53 +119,81 @@ const HeroSection = () => {
                 📄
               </a>
             </div>
-          </div>
 
-          {/* Right side - Photo with badge and logos */}
-          <div className="flex flex-col items-center lg:items-end">
-            {/* Portrait with badge */}
-            <div className="portrait-wrap">
+            {/* Portrait container */}
+            <div className="portrait-container">
               <img
                 src={PROFESSIONAL_PHOTO}
                 alt="Shreyansh Jain portrait"
                 className="portrait-img"
               />
+            </div>
+
+            {/* Experience badge - outside image, single line */}
+            <div className="mt-4">
               <button 
-                className="photo-badge"
+                className="experience-badge"
                 aria-label="10 plus years experience"
               >
-                10+ Years<br/>
-                <span className="badge-sub">Experience</span>
+                10+ Years Experience
               </button>
             </div>
 
-            {/* Company logos row directly below photo */}
-            <div className="company-logos" aria-label="Previous companies">
-              <a href="#" className="logo-link" title="Mercedes-Benz R&D">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">MB</span>
-                </div>
-              </a>
-              <a href="#" className="logo-link" title="PolCol">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">PC</span>
-                </div>
-              </a>
-              <a href="#" className="logo-link" title="Pickrr">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">PK</span>
-                </div>
-              </a>
-              <a href="#" className="logo-link" title="Omnivio">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">OV</span>
-                </div>
-              </a>
-              <a href="#" className="logo-link" title="BT Group">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">BT</span>
-                </div>
-              </a>
+            {/* Auto-rolling company logos */}
+            <div className="company-logos-wrapper" aria-label="Previous companies">
+              <div className="company-logos-rolling">
+                <a href="#" className="logo-link" title="Mercedes-Benz R&D">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">MB</span>
+                  </div>
+                </a>
+                <a href="#" className="logo-link" title="PolCol">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">PC</span>
+                  </div>
+                </a>
+                <a href="#" className="logo-link" title="Pickrr">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">PK</span>
+                  </div>
+                </a>
+                <a href="#" className="logo-link" title="Omnivio">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">OV</span>
+                  </div>
+                </a>
+                <a href="#" className="logo-link" title="BT Group">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">BT</span>
+                  </div>
+                </a>
+                {/* Duplicate for seamless scrolling */}
+                <a href="#" className="logo-link" title="Mercedes-Benz R&D">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">MB</span>
+                  </div>
+                </a>
+                <a href="#" className="logo-link" title="PolCol">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">PC</span>
+                  </div>
+                </a>
+                <a href="#" className="logo-link" title="Pickrr">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">PK</span>
+                  </div>
+                </a>
+                <a href="#" className="logo-link" title="Omnivio">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">OV</span>
+                  </div>
+                </a>
+                <a href="#" className="logo-link" title="BT Group">
+                  <div className="company-logo">
+                    <span className="text-gray-600 font-bold text-xs">BT</span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
