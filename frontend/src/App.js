@@ -120,19 +120,16 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* Portrait container */}
-            <div className="portrait-container">
+            {/* Portrait container with overlaying badge */}
+            <div className="portrait-container-with-badge">
               <img
                 src={PROFESSIONAL_PHOTO}
                 alt="Shreyansh Jain portrait"
                 className="portrait-img"
               />
-            </div>
-
-            {/* Experience badge - outside image, single line */}
-            <div className="mt-4">
+              {/* Experience badge - overlaying image, center aligned with bottom-right corner */}
               <button 
-                className="experience-badge"
+                className="experience-badge-overlay"
                 aria-label="10 plus years experience"
               >
                 10+ Years Experience
