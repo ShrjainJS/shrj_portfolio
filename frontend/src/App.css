@@ -228,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for consistent spacing */
 @media (max-width: 1024px) and (min-width: 769px) {
   /* Tablet view fixes */
   .portrait-container {
@@ -245,6 +245,12 @@ h1, h2, h3, h4, h5, h6 {
   .experience-badge-external {
     padding: 14px 24px;
     font-size: 14px;
+  }
+  
+  /* Reduce excessive spacing in tablet */
+  #home {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
   }
 }
 
@@ -266,13 +272,29 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   /* Mobile layout improvements for better spacing */
-  .space-y-8 > * + * {
-    margin-top: 1.5rem; /* Reduced spacing between elements on mobile */
+  .space-y-6 > * + * {
+    margin-top: 1.25rem; /* Reduced spacing between elements on mobile */
   }
   
   /* Better mobile typography spacing */
   h1 {
     margin-bottom: 1rem !important;
+  }
+}
+
+/* Large desktop spacing fixes */
+@media (min-width: 1800px) {
+  #home {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+  
+  #home .max-w-7xl {
+    margin-top: 2rem !important;
+  }
+  
+  #home .grid {
+    min-height: 60vh !important;
   }
 }
 
