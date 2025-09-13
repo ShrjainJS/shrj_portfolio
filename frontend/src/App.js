@@ -169,25 +169,25 @@ const Navigation = () => {
 // Hero Section
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen bg-white flex items-center py-16 md:py-20 lg:py-24">
+    <section id="home" className="min-h-screen bg-white dark:bg-gray-900 flex items-center py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 mt-12"> {/* Added top margin */}
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
           {/* Left side - Text content */}
           <div className="space-y-6"> {/* Reduced from space-y-8 to space-y-6 */}
             {/* Available for work badge - with better spacing */}
-            <div className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+            <div className="inline-flex items-center space-x-2 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               <span>Available for opportunities</span>
             </div>
 
             {/* Main heading - with reduced gap */}
             <div className="space-y-4 -mt-2"> {/* Added negative margin to reduce gap */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                 Hi I'm{" "}
-                <span className="text-5xl md:text-6xl lg:text-7xl text-blue-600">Shreyansh Jain</span>, a Senior PM & Data Enthusiast
+                <span className="text-5xl md:text-6xl lg:text-7xl text-blue-600 dark:text-blue-400">Shreyansh Jain</span>, a Senior PM & Data Enthusiast
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
                 Building and scaling SaaS, platform, and analytics products with measurable 
                 business impact — from 0→1 to enterprise scale.
               </p>
@@ -197,7 +197,7 @@ const HeroSection = () => {
             <div className="pt-4 flex justify-start lg:justify-start md:justify-center justify-center">
               <button
                 onClick={() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })}
-                className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-200 font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="bg-blue-600 dark:bg-blue-700 text-white px-8 py-4 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-200 font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 View My Work →
               </button>
