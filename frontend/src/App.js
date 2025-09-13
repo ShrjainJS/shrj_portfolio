@@ -66,8 +66,8 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
           {/* Left side - Text content */}
           <div className="space-y-8">
-            {/* Available for work badge */}
-            <div className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+            {/* Available for work badge - moved to top for better mobile layout */}
+            <div className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-2 lg:mb-0">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               <span>Available for opportunities</span>
             </div>
