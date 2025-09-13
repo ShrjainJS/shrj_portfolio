@@ -1,122 +1,142 @@
 /* Clean, modern portfolio styles */
 
-/* Hero right column layout */
-.hero-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-
-/* Portrait container */
+/* Portrait container - fixed width, left-aligned */
 .portrait-wrap {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(20, 20, 30, 0.06);
+  width: 320px;
+  height: 320px;
 }
 
 .portrait-img {
   display: block;
-  width: 360px;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Translucent badge on portrait */
+/* Small circular badge at bottom-right corner overlapping edge */
 .photo-badge {
   position: absolute;
-  right: 16px;
-  bottom: 16px;
-  background: rgba(255, 255, 255, 0.75);
-  color: #0B1724;
-  border: none;
+  right: -8px;
+  bottom: -8px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #1f2937;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 8px 12px;
-  border-radius: 20px;
+  border-radius: 50px;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 1;
+  font-size: 11px;
+  line-height: 1.2;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(10, 20, 40, 0.06);
-  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease, opacity 200ms ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 300ms ease;
   cursor: default;
-  opacity: 0.95;
+  opacity: 0.9;
+  backdrop-filter: blur(10px);
 }
 
 .photo-badge .badge-sub {
   font-weight: 500;
-  font-size: 10px;
-  opacity: 0.9;
+  font-size: 9px;
+  opacity: 0.8;
 }
 
-/* Badge hover/focus effects */
+/* Badge hover effects - scale up 5-10%, increase opacity, glow outline */
 .photo-badge:hover,
 .photo-badge:focus {
-  transform: scale(1.06);
-  box-shadow: 0 14px 30px rgba(10, 20, 40, 0.18);
-  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.08);
+  opacity: 1;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(59, 130, 246, 0.3);
   outline: none;
 }
 
-/* Responsive badge for small screens */
-@media (max-width: 640px) {
-  .portrait-img {
-    width: 260px;
-  }
-  
-  .photo-badge {
-    right: 12px;
-    bottom: 12px;
-    padding: 6px 10px;
-    border-radius: 16px;
-    font-size: 11px;
-    transform: scale(0.85);
-  }
-  
-  .photo-badge:hover {
-    transform: scale(0.91);
-  }
-}
-
-/* Company logos row */
+/* Company logos row directly below photo - horizontal scrolling */
 .company-logos {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
-  justify-content: center;
-  padding-top: 8px;
+  justify-content: flex-start;
+  padding-top: 16px;
+  width: 320px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.company-logos::-webkit-scrollbar {
+  display: none;
 }
 
 .logo-link {
-  display: inline-block;
-  width: 56px;
-  height: 56px;
-  border-radius: 10px;
-  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  text-decoration: none;
+  transition: all 200ms ease;
+  flex-shrink: 0;
+}
+
+.company-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  transition: all 200ms ease;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #ffffff;
+  filter: grayscale(100%);
+  transition: filter 200ms ease;
 }
 
-.logo-link img {
-  max-width: 38px;
-  max-height: 38px;
-  display: block;
-  filter: grayscale(0.02) contrast(0.95);
-  opacity: 0.95;
+/* Logo hover effect - fade to full color */
+.logo-link:hover .company-logo,
+.logo-link:focus .company-logo {
+  filter: grayscale(0%);
 }
 
-/* Accessibility focus state for logos */
+.logo-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .logo-link:focus {
-  box-shadow: 0 6px 18px rgba(10, 20, 40, 0.12);
   outline: none;
-  border-radius: 10px;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portrait-wrap {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .company-logos {
+    width: 280px;
+  }
+  
+  .photo-badge {
+    right: -6px;
+    bottom: -6px;
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+  
+  .photo-badge .badge-sub {
+    font-size: 8px;
+  }
 }
 
 /* Custom scrollbar */
