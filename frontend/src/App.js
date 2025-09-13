@@ -607,14 +607,16 @@ const ContactSection = () => {
 // Main App Component
 function App() {
   return (
-    <div className="App bg-white">
-      <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <PortfolioSection />
-      <ContactSection />
-    </div>
+    <ThemeProvider>
+      <div className="App bg-white dark:bg-gray-900 transition-colors duration-300">
+        <Navigation />
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <PortfolioSection />
+        <ContactSection />
+      </div>
+    </ThemeProvider>
   );
 }
 
