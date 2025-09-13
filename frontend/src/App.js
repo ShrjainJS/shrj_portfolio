@@ -272,57 +272,57 @@ const HeroSection = () => {
             {/* Auto-rolling company logos */}
             <div className="company-logos-wrapper" aria-label="Previous companies">
               <div className="company-logos-rolling">
-                <a href="#" className="logo-link" title="Mercedes-Benz R&D">
+                <div className="logo-link" title="Mercedes-Benz R&D">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">MB</span>
                   </div>
-                </a>
-                <a href="#" className="logo-link" title="PolCol">
+                </div>
+                <div className="logo-link" title="PolCol">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">PC</span>
                   </div>
-                </a>
-                <a href="#" className="logo-link" title="Pickrr">
+                </div>
+                <div className="logo-link" title="Pickrr">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">PK</span>
                   </div>
-                </a>
-                <a href="#" className="logo-link" title="Omnivio">
+                </div>
+                <div className="logo-link" title="Omnivio">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">OV</span>
                   </div>
-                </a>
-                <a href="#" className="logo-link" title="BT Group">
+                </div>
+                <div className="logo-link" title="BT Group">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">BT</span>
                   </div>
-                </a>
+                </div>
                 {/* Duplicate for seamless scrolling */}
-                <a href="#" className="logo-link" title="Mercedes-Benz R&D">
+                <div className="logo-link" title="Mercedes-Benz R&D">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">MB</span>
                   </div>
-                </a>
-                <a href="#" className="logo-link" title="PolCol">
+                </div>
+                <div className="logo-link" title="PolCol">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">PC</span>
                   </div>
-                </a>
-                <a href="#" className="logo-link" title="Pickrr">
+                </div>
+                <div className="logo-link" title="Pickrr">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">PK</span>
                   </div>
-                </a>
-                <a href="#" className="logo-link" title="Omnivio">
+                </div>
+                <div className="logo-link" title="Omnivio">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">OV</span>
                   </div>
-                </a>
-                <a href="#" className="logo-link" title="BT Group">
+                </div>
+                <div className="logo-link" title="BT Group">
                   <div className="company-logo">
                     <span className="text-gray-600 font-bold text-xs">BT</span>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
