@@ -64,55 +64,7 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen bg-white flex items-center pt-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left side - Photo with badge and logos */}
-          <div className="flex flex-col items-start">
-            {/* Portrait with badge */}
-            <div className="portrait-wrap">
-              <img
-                src={PROFESSIONAL_PHOTO}
-                alt="Shreyansh Jain portrait"
-                className="portrait-img"
-              />
-              <button 
-                className="photo-badge"
-                aria-label="10 plus years experience"
-              >
-                10+ Years<br/>
-                <span className="badge-sub">Experience</span>
-              </button>
-            </div>
-
-            {/* Company logos row directly below photo */}
-            <div className="company-logos" aria-label="Previous companies">
-              <a href="#" className="logo-link" title="Mercedes-Benz R&D">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">MB</span>
-                </div>
-              </a>
-              <a href="#" className="logo-link" title="PolCol">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">PC</span>
-                </div>
-              </a>
-              <a href="#" className="logo-link" title="Pickrr">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">PK</span>
-                </div>
-              </a>
-              <a href="#" className="logo-link" title="Omnivio">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">OV</span>
-                </div>
-              </a>
-              <a href="#" className="logo-link" title="BT Group">
-                <div className="company-logo">
-                  <span className="text-gray-600 font-bold text-xs">BT</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          {/* Right side - Text content */}
+          {/* Left side - Text content */}
           <div className="space-y-8">
             {/* Available for work badge */}
             <div className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
@@ -162,6 +114,54 @@ const HeroSection = () => {
                 className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
               >
                 📄
+              </a>
+            </div>
+          </div>
+
+          {/* Right side - Photo with badge and logos */}
+          <div className="flex flex-col items-center lg:items-end">
+            {/* Portrait with badge */}
+            <div className="portrait-wrap">
+              <img
+                src={PROFESSIONAL_PHOTO}
+                alt="Shreyansh Jain portrait"
+                className="portrait-img"
+              />
+              <button 
+                className="photo-badge"
+                aria-label="10 plus years experience"
+              >
+                10+ Years<br/>
+                <span className="badge-sub">Experience</span>
+              </button>
+            </div>
+
+            {/* Company logos row directly below photo */}
+            <div className="company-logos" aria-label="Previous companies">
+              <a href="#" className="logo-link" title="Mercedes-Benz R&D">
+                <div className="company-logo">
+                  <span className="text-gray-600 font-bold text-xs">MB</span>
+                </div>
+              </a>
+              <a href="#" className="logo-link" title="PolCol">
+                <div className="company-logo">
+                  <span className="text-gray-600 font-bold text-xs">PC</span>
+                </div>
+              </a>
+              <a href="#" className="logo-link" title="Pickrr">
+                <div className="company-logo">
+                  <span className="text-gray-600 font-bold text-xs">PK</span>
+                </div>
+              </a>
+              <a href="#" className="logo-link" title="Omnivio">
+                <div className="company-logo">
+                  <span className="text-gray-600 font-bold text-xs">OV</span>
+                </div>
+              </a>
+              <a href="#" className="logo-link" title="BT Group">
+                <div className="company-logo">
+                  <span className="text-gray-600 font-bold text-xs">BT</span>
+                </div>
               </a>
             </div>
           </div>
