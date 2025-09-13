@@ -75,8 +75,8 @@ const HeroSection = () => {
             {/* Main heading */}
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Hi, I'm Shreyansh Jain, a{" "}
-                <span className="text-blue-600">Senior Product Manager</span>
+                Hi I'm{" "}
+                <span className="text-5xl md:text-6xl lg:text-7xl text-blue-600">Shreyansh Jain</span>, a Senior PM & Data Enthusiast
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
