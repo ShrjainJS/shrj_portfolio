@@ -174,17 +174,6 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="xl:hidden mt-4 py-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700">
             <div className="flex flex-col space-y-3 px-4">
-              {/* Theme toggle as first item in mobile menu */}
-              <button
-                onClick={() => {
-                  toggleTheme();
-                  setIsMobileMenuOpen(false);
-                }}
-                className="text-left text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
-              >
-                {isDark ? 'Light Theme' : 'Dark Theme'}
-              </button>
-              
               {/* Navigation items in mobile menu */}
               {['Home', 'About', 'Experience', 'Portfolio', 'Contact'].map((item) => (
                 <button
@@ -222,6 +211,19 @@ const Navigation = () => {
               >
                 Download Resume
               </a>
+            </div>
+            
+            {/* Theme toggle as separate highlighted section at the end */}
+            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
+              <button
+                onClick={() => {
+                  toggleTheme();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="w-full text-left px-4 py-3 bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 font-medium"
+              >
+                {isDark ? 'Light Theme' : 'Dark Theme'}
+              </button>
             </div>
           </div>
         )}
