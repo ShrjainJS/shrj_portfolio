@@ -6,6 +6,7 @@ const PROFESSIONAL_PHOTO = "https://images.unsplash.com/photo-1560250097-0b93528
 // Navigation Component
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,10 @@ const Navigation = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -54,14 +59,56 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-4">
+            {/* Desktop - Get in Touch button */}
             <a
               href="mailto:shreyansh@example.com"
-              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium"
+              className="hidden md:block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium"
             >
               Get in Touch
             </a>
+            
+            {/* Mobile - Hamburger menu */}
+            <button
+              onClick={toggleMobileMenu}
+              className="md:hidden p-2 text-gray-600 hover:text-gray-900"
+            >
+              <div className="w-6 h-6 flex flex-col justify-center items-center">
+                <span className={`bg-current w-6 h-0.5 rounded-sm transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                <span className={`bg-current w-6 h-0.5 rounded-sm transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`bg-current w-6 h-0.5 rounded-sm transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+              </div>
+            </button>
           </div>
         </div>
+        
+        {/* Mobile menu dropdown */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg border border-gray-100">
+            <div className="flex flex-col space-y-3 px-4">
+              <a
+                href="mailto:shreyansh@example.com"
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Email
+              </a>
+              <a
+                href="https://linkedin.com/in/shreyanshjain"
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                LinkedIn
+              </a>
+              <a
+                href="/resume.pdf"
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Download Resume
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
