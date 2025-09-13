@@ -161,7 +161,8 @@ h1, h2, h3, h4, h5, h6 {
   
   .company-logos-wrapper {
     width: 280px;
-    padding-top: 28px; /* Adjusted spacing for tablet */
+    padding-top: 52px; /* Adjusted spacing for tablet to prevent overlap */
+    margin-top: 14px;
   }
   
   .experience-badge-external {
@@ -178,8 +179,8 @@ h1, h2, h3, h4, h5, h6 {
   
   .company-logos-wrapper {
     width: 260px;
-    padding-top: 24px; /* Adjusted spacing for mobile */
-    margin-top: 12px; /* Extra margin for mobile */
+    padding-top: 48px; /* Adjusted spacing for mobile to prevent overlap */
+    margin-top: 16px; /* Extra margin for mobile */
   }
   
   .experience-badge-external {
