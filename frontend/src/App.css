@@ -117,12 +117,12 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
-/* Experience badge - outside image container, overlaying at bottom-right corner */
+/* Experience badge - outside image container, centered on bottom edge for all views */
 .experience-badge-external {
   position: absolute;
-  right: 0;
+  right: 50%;
   bottom: 0;
-  transform: translate(50%, 50%); /* Center the badge on the bottom-right corner */
+  transform: translate(50%, 50%); /* Center horizontally at bottom edge */
   background: linear-gradient(135deg, rgba(29, 78, 216, 0.85), rgba(37, 99, 235, 0.85)); /* Blue gradient */
   color: white;
   border: none;
@@ -152,19 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-/* Mobile/tablet badge centering when layout stacks */
-@media (max-width: 1023px) {
-  .experience-badge-external {
-    right: 50%;
-    bottom: 0;
-    transform: translate(50%, 50%); /* Center horizontally at bottom edge */
-  }
-  
-  .experience-badge-external:hover,
-  .experience-badge-external:focus {
-    transform: translate(50%, 50%) scale(1.08);
-  }
-}
+/* Remove the mobile-specific positioning since we want it centered for all views */
 
 /* Auto-rolling company logos wrapper with reduced spacing */
 .company-logos-wrapper {
