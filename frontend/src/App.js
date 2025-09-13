@@ -77,12 +77,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center">
           {/* Left side - Logo with scroll behavior */}
           <div className="flex items-center space-x-2">
-            <div className="text-xl font-bold text-gray-900 dark:text-white">
+            <div className="text-xl font-bold text-gray-900 dark:text-white transition-all duration-500 ease-in-out">
               {isScrolled ? 'SJ' : 'Shreyansh Jain'}
             </div>
-            {/* Blinking green dot when scrolled */}
+            {/* Radiating green dot when scrolled */}
             {isScrolled && (
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-green-500 rounded-full radiate-dot"></div>
             )}
           </div>
           
