@@ -207,7 +207,7 @@ const HeroSection = () => {
             <div className="space-y-4 -mt-2"> {/* Added negative margin to reduce gap */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight transition-colors duration-300">
                 Hi I'm{" "}
-                <span className="text-5xl md:text-6xl lg:text-7xl transition-colors duration-300" style={{color: 'var(--teal-accent)'}}>Shreyansh Jain</span>, a Senior PM & Data Enthusiast
+                <span className="text-5xl md:text-6xl lg:text-7xl text-blue-600 dark:text-blue-400 transition-colors duration-300">Shreyansh Jain</span>, a Senior PM & Data Enthusiast
               </h1>
               
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg transition-colors duration-300">
