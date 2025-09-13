@@ -1,27 +1,13 @@
 /* Clean, modern portfolio styles with professional typography */
 
-/* Radiating green dot animation */
-@keyframes radiate {
-  0% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-  }
-}
-
-.radiate-dot {
-  animation: radiate 2s infinite;
-}
+/* Professional typography system */
 body {
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   letter-spacing: -0.01em;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,11 +15,68 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  transition: color 300ms ease-in-out;
 }
 
 .text-lg, .text-xl {
   letter-spacing: -0.01em;
 }
+
+/* Theme-aware color system */
+:root {
+  --teal-accent: #0FA4A4;
+  --light-bg: #ffffff;
+  --light-bg-secondary: #f8fafc;
+  --light-text: #1f2937;
+  --light-text-secondary: #6b7280;
+  --light-border: #e5e7eb;
+  --dark-bg: #0B1724;
+  --dark-bg-secondary: #1e293b;
+  --dark-text: #f8fafc;
+  --dark-text-secondary: #cbd5e1;
+  --dark-border: #334155;
+}
+
+/* Global theme transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
+}
+
+/* Light theme (default) */
+.light-theme {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+/* Dark theme */
+.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Auto-invert company logos in dark mode */
+.dark .company-logo {
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(0.9);
+}
+
+.dark .company-logo:hover {
+  filter: invert(0) hue-rotate(0deg) brightness(1) contrast(1);
+}
+
+/* Theme-aware shadows */
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3); }
+
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.dark .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2); }
+
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+.dark .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2); }
+
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+.dark .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
 
 /* Portrait wrapper with external badge positioning */
 .portrait-wrapper {
