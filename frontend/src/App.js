@@ -154,8 +154,8 @@ const HeroSection = () => {
 
           {/* Right side - Photo with badge and logos */}
           <div className="flex flex-col items-center lg:items-end">
-            {/* Social CTAs above photo */}
-            <div className="flex items-center space-x-4 mb-6">
+            {/* Social CTAs above photo - only on desktop */}
+            <div className="hidden lg:flex items-center space-x-4 mb-6">
               <a
                 href="https://linkedin.com/in/shreyanshjain"
                 className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
