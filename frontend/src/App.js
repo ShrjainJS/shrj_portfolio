@@ -96,96 +96,69 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - Photo and cards */}
+          {/* Right side - Photo and company logos */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Professional photo */}
-              <div className="relative">
+            <div className="hero-right">
+              {/* Portrait with badge */}
+              <div className="portrait-wrap">
                 <img
                   src={PROFESSIONAL_PHOTO}
-                  alt="Shreyansh Jain"
-                  className="w-80 h-80 object-cover rounded-3xl shadow-2xl"
+                  alt="Shreyansh Jain portrait"
+                  className="portrait-img"
                 />
-                
-                {/* Experience badge overlay */}
-                <div className="absolute -top-4 -right-4 bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg">
-                  <p className="text-sm font-bold">10+ Years</p>
-                  <p className="text-xs opacity-90">Experience</p>
-                </div>
+                <button 
+                  className="photo-badge"
+                  aria-label="10 plus years experience"
+                >
+                  10+ Years
+                  <span className="badge-sub">Experience</span>
+                </button>
               </div>
 
-              {/* Floating cards */}
-              <div className="absolute -left-8 top-20 space-y-4">
-                {/* Location card */}
-                <div className="bg-white rounded-2xl p-4 shadow-lg border border-gray-100 min-w-[180px]">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      📍
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">London, UK</p>
-                      <p className="text-xs text-gray-500">Currently based</p>
-                    </div>
+              {/* Company logos row */}
+              <div className="company-logos" aria-label="Recent companies">
+                <a href="#" className="logo-link" title="BT Group">
+                  <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                    <span className="text-red-600 font-bold text-xs">BT</span>
                   </div>
-                </div>
-
-                {/* Expertise card */}
-                <div className="bg-white rounded-2xl p-4 shadow-lg border border-gray-100 min-w-[180px]">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                      🎯
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">SaaS & Platform</p>
-                      <p className="text-xs text-gray-500">Expert</p>
-                    </div>
+                </a>
+                <a href="#" className="logo-link" title="Omnivio">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <span className="text-purple-600 font-bold text-xs">OV</span>
                   </div>
-                </div>
+                </a>
+                <a href="#" className="logo-link" title="Pickrr">
+                  <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <span className="text-orange-600 font-bold text-xs">PK</span>
+                  </div>
+                </a>
+                <a href="#" className="logo-link" title="PolCol">
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                    <span className="text-green-600 font-bold text-xs">PC</span>
+                  </div>
+                </a>
               </div>
 
-              {/* Recent companies card */}
-              <div className="absolute -right-12 bottom-8">
-                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 min-w-[220px]">
-                  <p className="text-sm font-medium text-gray-900 mb-3">Recent Companies</p>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-6 h-6 bg-red-100 rounded flex items-center justify-center text-xs">🏢</div>
-                      <span className="text-sm text-gray-700">BT Group</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-6 h-6 bg-purple-100 rounded flex items-center justify-center text-xs">🚀</div>
-                      <span className="text-sm text-gray-700">Omnivio</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-6 h-6 bg-orange-100 rounded flex items-center justify-center text-xs">📦</div>
-                      <span className="text-sm text-gray-700">Pickrr</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Social icons */}
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
-                <div className="flex items-center space-x-4">
-                  <a
-                    href="https://linkedin.com/in/shreyanshjain"
-                    className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
-                  >
-                    💼
-                  </a>
-                  <a
-                    href="mailto:shreyansh@example.com"
-                    className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
-                  >
-                    📧
-                  </a>
-                  <a
-                    href="/resume.pdf"
-                    className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
-                  >
-                    📄
-                  </a>
-                </div>
+              {/* Social icons below */}
+              <div className="flex items-center space-x-4 mt-6">
+                <a
+                  href="https://linkedin.com/in/shreyanshjain"
+                  className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
+                >
+                  💼
+                </a>
+                <a
+                  href="mailto:shreyansh@example.com"
+                  className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
+                >
+                  📧
+                </a>
+                <a
+                  href="/resume.pdf"
+                  className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
+                >
+                  📄
+                </a>
               </div>
             </div>
           </div>
