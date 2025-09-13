@@ -20,9 +20,14 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
 }
 
-/* Portrait container with badge overlay */
-.portrait-container-with-badge {
+/* Portrait wrapper with external badge positioning */
+.portrait-wrapper {
   position: relative;
+  display: inline-block;
+}
+
+/* Portrait container - clean without badge overlay */
+.portrait-container {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(20, 20, 30, 0.06);
@@ -37,8 +42,8 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
-/* Experience badge - overlaying image, bigger size, deeper blue */
-.experience-badge-overlay {
+/* Experience badge - outside image container, overlaying at bottom-right corner */
+.experience-badge-external {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -63,8 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Badge hover effects - same animation, enhanced styling with deeper blue */
-.experience-badge-overlay:hover,
-.experience-badge-overlay:focus {
+.experience-badge-external:hover,
+.experience-badge-external:focus {
   transform: translate(50%, 50%) scale(1.08);
   background: linear-gradient(135deg, rgba(29, 78, 216, 0.95), rgba(37, 99, 235, 0.95));
   box-shadow: 0 10px 30px rgba(29, 78, 216, 0.5), 0 0 0 3px rgba(37, 99, 235, 0.4);
