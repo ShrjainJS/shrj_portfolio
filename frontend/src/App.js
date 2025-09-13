@@ -115,7 +115,12 @@ const Navigation = () => {
             {/* Desktop - Get in Touch button */}
             <a
               href="mailto:shreyansh@example.com"
-              className="hidden md:block bg-blue-600 dark:bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200 font-medium"
+              className="hidden md:block text-white px-6 py-2 rounded-full font-medium transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
+              style={{
+                backgroundColor: 'var(--teal-accent)'
+              }}
+              onMouseEnter={(e) => e.target.style.filter = 'brightness(0.9)'}
+              onMouseLeave={(e) => e.target.style.filter = 'brightness(1)'}
             >
               Get in Touch
             </a>
