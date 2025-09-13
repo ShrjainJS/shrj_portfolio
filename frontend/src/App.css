@@ -140,19 +140,14 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(10px);
   white-space: nowrap;
   z-index: 10;
-  pointer-events: none; /* Prevent clicking to avoid rectangle issue */
 }
 
 /* Badge hover effects - same animation, enhanced styling with blue */
-.experience-badge-external:hover,
-.experience-badge-external:focus {
+.portrait-wrapper:hover .experience-badge-external {
   transform: translate(50%, 50%) scale(1.08);
   background: linear-gradient(135deg, rgba(29, 78, 216, 0.95), rgba(37, 99, 235, 0.95));
   box-shadow: 0 10px 30px rgba(29, 78, 216, 0.5), 0 0 0 3px rgba(37, 99, 235, 0.4);
-  outline: none;
 }
-
-/* Remove the mobile-specific positioning since we want it centered for all views */
 
 /* Auto-rolling company logos wrapper with reduced spacing */
 .company-logos-wrapper {
