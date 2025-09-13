@@ -216,9 +216,9 @@ const Navigation = () => {
 // Hero Section
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen bg-white dark:bg-gray-900 flex items-center py-16 md:py-20 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6 mt-6 md:mt-12"> {/* Reduced mobile top margin from 12 to 6 */}
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
+    <section id="home" className="min-h-screen bg-white dark:bg-gray-900 flex items-center py-8 md:py-12 lg:py-16">
+      <div className="max-w-7xl mx-auto px-6 mt-4 md:mt-8 lg:mt-12"> {/* Responsive top margin */}
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]"> {/* Responsive gaps and heights */}
           {/* Left side - Text content */}
           <div className="space-y-6"> {/* Reduced from space-y-8 to space-y-6 */}
             {/* Available for work badge - with better spacing */}
