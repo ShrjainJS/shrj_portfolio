@@ -253,28 +253,6 @@ const HeroSection = () => {
 
           {/* Right side - Photo with badge and logos */}
           <div className="flex flex-col items-center lg:items-end">
-            {/* Social CTAs above photo - only on desktop */}
-            <div className="hidden lg:flex items-center space-x-4 mb-6">
-              <a
-                href="https://linkedin.com/in/shreyanshjain"
-                className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
-              >
-                💼
-              </a>
-              <a
-                href="mailto:shreyansh@example.com"
-                className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
-              >
-                📧
-              </a>
-              <a
-                href="/resume.pdf"
-                className="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
-              >
-                📄
-              </a>
-            </div>
-
             {/* Portrait container with external badge */}
             <div className="portrait-wrapper">
               <div className="portrait-container">
@@ -285,12 +263,9 @@ const HeroSection = () => {
                 />
               </div>
               {/* Experience badge - outside container, overlaying image */}
-              <button 
-                className="experience-badge-external"
-                aria-label="10 plus years experience"
-              >
+              <div className="experience-badge-external" aria-label="10 plus years experience">
                 10+ Years Experience
-              </button>
+              </div>
             </div>
 
             {/* Auto-rolling company logos */}
