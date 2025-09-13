@@ -1,6 +1,21 @@
 /* Clean, modern portfolio styles with professional typography */
 
-/* Professional typography system */
+/* Radiating green dot animation */
+@keyframes radiate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.radiate-dot {
+  animation: radiate 2s infinite;
+}
 body {
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
