@@ -76,12 +76,12 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-/* Auto-rolling company logos wrapper with proper spacing from badge */
+/* Auto-rolling company logos wrapper with sufficient spacing from badge */
 .company-logos-wrapper {
   width: 320px;
   overflow: hidden;
-  padding-top: 32px; /* Increased padding to prevent overlap with badge */
-  margin-top: 8px; /* Additional margin for clean separation */
+  padding-top: 60px; /* Significantly increased padding to clear badge */
+  margin-top: 16px; /* Additional margin for clean separation */
   position: relative;
 }
 
