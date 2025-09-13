@@ -86,18 +86,7 @@ const Navigation = () => {
             )}
           </div>
           
-          {/* Center - Dark/Light mode toggle */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
-          >
-            {isDark ? (
-              <span className="text-yellow-500">☀️</span>
-            ) : (
-              <span className="text-gray-600">🌙</span>
-            )}
-          </button>
-          
+          {/* Center - Navigation links */}
           <div className="hidden md:flex space-x-8">
             {['Home', 'About', 'Experience', 'Portfolio', 'Contact'].map((item) => (
               <button
@@ -111,6 +100,18 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-4">
+            {/* Desktop - Theme toggle before Get in Touch */}
+            <button
+              onClick={toggleTheme}
+              className="hidden md:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+            >
+              {isDark ? (
+                <span className="text-yellow-500">☀️</span>
+              ) : (
+                <span>🌙</span>
+              )}
+            </button>
+            
             {/* Desktop - Get in Touch button */}
             <a
               href="mailto:shreyansh@example.com"
@@ -137,6 +138,16 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700">
             <div className="flex flex-col space-y-3 px-4">
+              {/* Theme toggle as first item in mobile menu */}
+              <button
+                onClick={() => {
+                  toggleTheme();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-left text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+              >
+                {isDark ? 'Light Theme' : 'Dark Theme'}
+              </button>
               <a
                 href="mailto:shreyansh@example.com"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
