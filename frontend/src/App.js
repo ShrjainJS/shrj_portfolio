@@ -65,15 +65,15 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
           {/* Left side - Text content */}
-          <div className="space-y-8">
-            {/* Available for work badge - moved to top for better mobile layout */}
-            <div className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-2 lg:mb-0">
+          <div className="space-y-6"> {/* Reduced from space-y-8 to space-y-6 */}
+            {/* Available for work badge - with better spacing */}
+            <div className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               <span>Available for opportunities</span>
             </div>
 
-            {/* Main heading */}
-            <div className="space-y-4">
+            {/* Main heading - with reduced gap */}
+            <div className="space-y-4 -mt-2"> {/* Added negative margin to reduce gap */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Hi I'm{" "}
                 <span className="text-5xl md:text-6xl lg:text-7xl text-blue-600">Shreyansh Jain</span>, a Senior PM & Data Enthusiast
