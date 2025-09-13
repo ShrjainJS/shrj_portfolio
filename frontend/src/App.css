@@ -161,6 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   
   .company-logos-wrapper {
     width: 280px;
+    padding-top: 28px; /* Adjusted spacing for tablet */
   }
   
   .experience-badge-external {
@@ -177,11 +178,23 @@ h1, h2, h3, h4, h5, h6 {
   
   .company-logos-wrapper {
     width: 260px;
+    padding-top: 24px; /* Adjusted spacing for mobile */
+    margin-top: 12px; /* Extra margin for mobile */
   }
   
   .experience-badge-external {
     padding: 12px 20px;
     font-size: 13px;
+  }
+  
+  /* Mobile layout improvements for better spacing */
+  .space-y-8 > * + * {
+    margin-top: 1.5rem; /* Reduced spacing between elements on mobile */
+  }
+  
+  /* Better mobile typography spacing */
+  h1 {
+    margin-bottom: 1rem !important;
   }
 }
 
