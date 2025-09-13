@@ -120,16 +120,18 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* Portrait container with overlaying badge */}
-            <div className="portrait-container-with-badge">
-              <img
-                src={PROFESSIONAL_PHOTO}
-                alt="Shreyansh Jain portrait"
-                className="portrait-img"
-              />
-              {/* Experience badge - overlaying image, center aligned with bottom-right corner */}
+            {/* Portrait container with external badge */}
+            <div className="portrait-wrapper">
+              <div className="portrait-container">
+                <img
+                  src={PROFESSIONAL_PHOTO}
+                  alt="Shreyansh Jain portrait"
+                  className="portrait-img"
+                />
+              </div>
+              {/* Experience badge - outside container, overlaying image */}
               <button 
-                className="experience-badge-overlay"
+                className="experience-badge-external"
                 aria-label="10 plus years experience"
               >
                 10+ Years Experience
