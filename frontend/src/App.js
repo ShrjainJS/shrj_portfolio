@@ -86,7 +86,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="pt-4">
+            <div className="pt-4 flex justify-start lg:justify-start justify-center">
               <button
                 onClick={() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })}
                 className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-200 font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
