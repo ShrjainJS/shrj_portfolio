@@ -222,7 +222,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 6px;
   background: #ffffff;
   filter: grayscale(100%);
-  transition: filter 200ms ease;
+  transition: filter 200ms ease, transform 200ms ease;
 }
 
 /* Logo hover effect - fade to full color */
@@ -234,6 +234,10 @@ h1, h2, h3, h4, h5, h6 {
 .logo-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .logo-link:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .logo-link:focus {
