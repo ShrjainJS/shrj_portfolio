@@ -240,14 +240,20 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* CTA Button */}
-            <div className="pt-4 flex justify-start lg:justify-start md:justify-center justify-center">
+            {/* CTA Buttons */}
+            <div className="pt-4 flex flex-col sm:flex-row justify-start lg:justify-start md:justify-center gap-4">
               <button
                 onClick={() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })}
                 className="bg-blue-600 dark:bg-blue-700 text-white px-8 py-4 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-300 font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 View My Work →
               </button>
+              <a
+                href="/resume.pdf"
+                className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300 font-medium text-lg text-center"
+              >
+                Download Resume
+              </a>
             </div>
           </div>
 
