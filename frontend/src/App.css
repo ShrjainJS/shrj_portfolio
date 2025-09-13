@@ -1,7 +1,28 @@
-/* Clean, modern portfolio styles */
+/* Clean, modern portfolio styles with professional typography */
 
-/* Portrait container - clean without badge overlay */
-.portrait-container {
+/* Professional typography system */
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.text-lg, .text-xl {
+  letter-spacing: -0.01em;
+}
+
+/* Portrait container with badge overlay */
+.portrait-container-with-badge {
+  position: relative;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(20, 20, 30, 0.06);
@@ -16,32 +37,37 @@
   object-fit: cover;
 }
 
-/* Experience badge - outside image, single line, gradient blue */
-.experience-badge {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(59, 130, 246, 0.8));
+/* Experience badge - overlaying image, bigger size, deeper blue */
+.experience-badge-overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%); /* Center the badge on the bottom-right corner */
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.85), rgba(37, 99, 235, 0.85)); /* Deeper blue */
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 16px 28px; /* Bigger padding */
   border-radius: 50px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px; /* Slightly bigger font */
   line-height: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.4); /* Deeper shadow */
   transition: all 300ms ease;
   cursor: default;
   backdrop-filter: blur(10px);
   white-space: nowrap;
+  z-index: 10;
 }
 
-/* Badge hover effects - same animation, enhanced styling */
-.experience-badge:hover,
-.experience-badge:focus {
-  transform: scale(1.08);
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(59, 130, 246, 0.9));
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4), 0 0 0 3px rgba(59, 130, 246, 0.3);
+/* Badge hover effects - same animation, enhanced styling with deeper blue */
+.experience-badge-overlay:hover,
+.experience-badge-overlay:focus {
+  transform: translate(50%, 50%) scale(1.08);
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.95), rgba(37, 99, 235, 0.95));
+  box-shadow: 0 10px 30px rgba(29, 78, 216, 0.5), 0 0 0 3px rgba(37, 99, 235, 0.4);
   outline: none;
 }
 
@@ -122,7 +148,7 @@
 /* Responsive adjustments */
 @media (max-width: 1024px) and (min-width: 769px) {
   /* Tablet view fixes */
-  .portrait-container {
+  .portrait-container-with-badge {
     width: 280px;
     height: 280px;
   }
@@ -131,14 +157,14 @@
     width: 280px;
   }
   
-  .experience-badge {
-    padding: 10px 20px;
-    font-size: 13px;
+  .experience-badge-overlay {
+    padding: 14px 24px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
-  .portrait-container {
+  .portrait-container-with-badge {
     width: 260px;
     height: 260px;
   }
@@ -147,9 +173,9 @@
     width: 260px;
   }
   
-  .experience-badge {
-    padding: 8px 16px;
-    font-size: 12px;
+  .experience-badge-overlay {
+    padding: 12px 20px;
+    font-size: 13px;
   }
 }
 
