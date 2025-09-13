@@ -170,7 +170,7 @@ const Navigation = () => {
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen bg-white dark:bg-gray-900 flex items-center py-16 md:py-20 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6 mt-12"> {/* Added top margin */}
+      <div className="max-w-7xl mx-auto px-6 mt-6 md:mt-12"> {/* Reduced mobile top margin from 12 to 6 */}
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
           {/* Left side - Text content */}
           <div className="space-y-6"> {/* Reduced from space-y-8 to space-y-6 */}
