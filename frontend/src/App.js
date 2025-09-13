@@ -213,13 +213,7 @@ const HeroSection = () => {
             <div className="pt-4 flex justify-start lg:justify-start md:justify-center justify-center">
               <button
                 onClick={() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })}
-                className="text-white px-8 py-4 rounded-full font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-                style={{
-                  backgroundColor: 'var(--teal-accent)',
-                  '&:hover': { backgroundColor: 'var(--teal-accent)' }
-                }}
-                onMouseEnter={(e) => e.target.style.filter = 'brightness(0.9)'}
-                onMouseLeave={(e) => e.target.style.filter = 'brightness(1)'}
+                className="bg-blue-600 dark:bg-blue-700 text-white px-8 py-4 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-300 font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 View My Work →
               </button>
