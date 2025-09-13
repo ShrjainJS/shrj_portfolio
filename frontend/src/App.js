@@ -46,12 +46,22 @@ const ThemeProvider = ({ children }) => {
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showRadiatingDot, setShowRadiatingDot] = useState(false);
   const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 50);
+      
+      // Show radiating dot only when "Available for opportunities" badge is scrolled out of view
+      const availableBadge = document.querySelector('.inline-flex.items-center.space-x-2.bg-green-50');
+      if (availableBadge) {
+        const badgeRect = availableBadge.getBoundingClientRect();
+        setShowRadiatingDot(badgeRect.bottom < 0 && scrollY > 50);
+      }
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -67,6 +77,8 @@ const Navigation = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
       isScrolled 
@@ -75,13 +87,13 @@ const Navigation = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          {/* Left side - Logo with scroll behavior */}
+          {/* Left side - Logo with conditional scroll behavior */}
           <div className="flex items-center space-x-2">
             <div className="text-xl font-bold text-gray-900 dark:text-white transition-all duration-500 ease-in-out">
-              {isScrolled ? 'SJ' : 'Shreyansh Jain'}
+              {(isScrolled && window.innerWidth < 768) ? 'SJ' : 'Shreyansh Jain'}
             </div>
-            {/* Radiating green dot when scrolled */}
-            {isScrolled && (
+            {/* Radiating green dot when scrolled and available badge is out of view */}
+            {showRadiatingDot && (
               <div className="w-2 h-2 bg-green-500 rounded-full radiate-dot"></div>
             )}
           </div>
