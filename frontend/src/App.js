@@ -98,8 +98,8 @@ const Navigation = () => {
             )}
           </div>
           
-          {/* Center - Navigation links */}
-          <div className="hidden md:flex space-x-8">
+          {/* Center - Navigation links - hide earlier to prevent clutter */}
+          <div className="hidden xl:flex space-x-8"> {/* Changed from md:flex to xl:flex */}
             {['Home', 'About', 'Experience', 'Portfolio', 'Contact'].map((item) => (
               <button
                 key={item}
@@ -111,25 +111,25 @@ const Navigation = () => {
             ))}
           </div>
 
-          <div className="flex items-center space-x-4">
-            {/* Desktop/Tablet - Social icons alongside theme toggle */}
+          <div className="flex items-center space-x-2"> {/* Reduced space between icons */}
+            {/* Desktop/Tablet - Social icons alongside theme toggle - hide when space is limited */}
             <a
               href="https://linkedin.com/in/shreyanshjain"
-              className="hidden md:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+              className="hidden lg:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
               title="LinkedIn"
             >
               💼
             </a>
             <a
               href="mailto:shreyansh@example.com"
-              className="hidden md:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+              className="hidden lg:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
               title="Email"
             >
               📧
             </a>
             <a
               href="/resume.pdf"
-              className="hidden md:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+              className="hidden lg:block p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
               title="Download Resume"
             >
               📄
@@ -148,18 +148,18 @@ const Navigation = () => {
               )}
             </button>
             
-            {/* Desktop - Get in Touch button */}
+            {/* Desktop - Get in Touch button - hide on smaller screens to prevent clutter */}
             <a
               href="mailto:shreyansh@example.com"
-              className="hidden md:block bg-blue-600 dark:bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200 font-medium"
+              className="hidden xl:block bg-blue-600 dark:bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200 font-medium"
             >
               Get in Touch
             </a>
             
-            {/* Mobile - Hamburger menu */}
+            {/* Mobile/Tablet - Hamburger menu - show earlier */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              className="xl:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
             >
               <div className="w-6 h-6 flex flex-col justify-center items-center">
                 <span className={`bg-current w-6 h-0.5 rounded-sm transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
@@ -170,9 +170,9 @@ const Navigation = () => {
           </div>
         </div>
         
-        {/* Mobile menu dropdown */}
+        {/* Mobile/Tablet menu dropdown - show for all non-xl screens */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700">
+          <div className="xl:hidden mt-4 py-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700">
             <div className="flex flex-col space-y-3 px-4">
               {/* Theme toggle as first item in mobile menu */}
               <button
@@ -184,6 +184,23 @@ const Navigation = () => {
               >
                 {isDark ? 'Light Theme' : 'Dark Theme'}
               </button>
+              
+              {/* Navigation items in mobile menu */}
+              {['Home', 'About', 'Experience', 'Portfolio', 'Contact'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => {
+                    scrollToSection(item.toLowerCase());
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="text-left text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+                >
+                  {item}
+                </button>
+              ))}
+              
+              <hr className="border-gray-200 dark:border-gray-600" />
+              
               <a
                 href="mailto:shreyansh@example.com"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
