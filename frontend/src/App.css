@@ -76,6 +76,20 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
+/* Mobile/tablet badge centering when layout stacks */
+@media (max-width: 1023px) {
+  .experience-badge-external {
+    right: 50%;
+    bottom: 0;
+    transform: translate(50%, 50%); /* Center horizontally at bottom edge */
+  }
+  
+  .experience-badge-external:hover,
+  .experience-badge-external:focus {
+    transform: translate(50%, 50%) scale(1.08);
+  }
+}
+
 /* Auto-rolling company logos wrapper with reduced spacing */
 .company-logos-wrapper {
   width: 320px;
